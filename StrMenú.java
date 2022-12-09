@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class StrMenú {
+
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
         int option;
@@ -428,13 +429,35 @@ public class StrMenú {
                 "Los últimos tres caracteres de la cadena son: '" + palabra8.substring(palabra8.length() - 3) + "'");
     }
 
+    //DESDE NETBEANS
     private static void method2ej8() throws IOException {
+        BufferedReader buffinput = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Introduce una palabra");
+        String palabra8 = buffinput.readLine();
+        System.out.println("Introduce final a comparar");
+        String fin = buffinput.readLine();
+        if (palabra8.endsWith(fin)) {
+            System.out.println("La palabra " + palabra8 + " acaba en " + fin);
+        } else {
+            System.out.println("La palabra " + palabra8 + " no acaba en " + fin);
+        }
     }
 
     private static void method2ej9() throws IOException {
+        BufferedReader buffinput = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Introduce varias palabras unidas por guiones");
+        String palabra9 = buffinput.readLine();
+        String[] div = palabra9.split("-");
+        for (int i = 0; i < div.length; i++) {
+            System.out.println("Palabra " + (i + 1) + ": " + div[i]);
+        }
     }
 
     private static void method2ej10() throws IOException {
+        BufferedReader buffinput = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Introduce una palabra en mayúsculas");
+        String palabra10 = buffinput.readLine();
+        System.out.println("En minúsculas: " + palabra10.toLowerCase());
     }
 
     private static void strej4() {
